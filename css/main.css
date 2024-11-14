@@ -37,7 +37,8 @@ article > h2 {
     padding: 4px 8px;
 } 
 
-/* THis was done to show how the first-of-type works*/
+/* This was done to show how the first-of-type works*/
+
 article:first-of-type {
     border: 4px solid gray;
 }
@@ -77,4 +78,21 @@ ul li {
 
 .done_list li:nth-child(odd) {
     background-color: rgba(0, 255, 0, 0.5);
+}
+
+.check {
+    text-align: center;
+}
+
+.decorated-heading::after {
+    content: "\2744";
+    color: white;
+    margin-left: 5px;
+}
+
+input[type="checkbox"]:checked + span:after {
+    content: "\2744";
+    /* never eat yellow snow */
+    color: yellow;
+    margin-left: 5px;
 }
